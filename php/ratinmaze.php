@@ -28,6 +28,7 @@ $path[2][0] = 0;
 $path[2][1] = 0;
 $path[2][2] = 0;
 
+// Function to find the path.
 function doesPathExists($params, &$path, $x, $y, $size)
 {
   if (($x == $size - 1 && $y == $size - 1)) {
