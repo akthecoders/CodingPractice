@@ -8,8 +8,7 @@ class SubSetArray {
     int[][] result = findSubsets(input, 0, input.length);
     for (int i = 0; i < result.length; i++) {
       for (int j = 0; j < result[i].length; j++) {
-        if (result[i][j] != 0)
-          System.out.print(result[i][j] + " ");
+        System.out.print(result[i][j] + " ");
       }
       System.out.println();
     }
@@ -18,19 +17,20 @@ class SubSetArray {
 
   public static int[][] findSubsets(int[] input, int start, int end) {
     if (end - start == 1) {
-      int smallAns[][] = new int[2][1];
-      smallAns[0][0] = 0;
-      smallAns[1][0] = input[start];
+      int smallAns[][] = new int[1][1];
+      smallAns[0][0] = input[start];
       return smallAns;
     }
 
     else {
       int[][] smallInput = findSubsets(input, start + 1, end);
-      int result[][] = new int[2 * smallInput.length][];
+      int result[][] = new int[(2 * smallInput.length) + 1][];
 
       int rows = smallInput.length;
-      int count = 0;
-
+      int ary[] = new int[1];
+      ary[0] = input[start];
+      result[0] = ary;
+      int count = 1;
       for (int i = 0; i < rows; i++) {
         result[count++] = smallInput[i];
       }
