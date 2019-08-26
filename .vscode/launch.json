@@ -1,0 +1,11 @@
+{
+  "configurations": [
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - NoOfNo",
+      "request": "launch",
+      "mainClass": "NoOfNo",
+      "projectName": "coding_dfe74aa"
+    }
+  ]
+}
