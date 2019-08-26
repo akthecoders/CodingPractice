@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "CodeLens (Launch) - SubSetArray",
+      "request": "launch",
+      "mainClass": "SubSetArray",
+      "projectName": "coding_dfe74aa"
+    },
+    {
+      "type": "java",
       "name": "CodeLens (Launch) - NoOfNo",
       "request": "launch",
       "mainClass": "NoOfNo",
