@@ -26,21 +26,20 @@ public class FindNextLargeElement {
       else if(root.data < res.data) {
         res = root;
       }
-
-      for(int i = 0; i < root.children.size(); i++) {
-        TreeNode<Integer> temp = findNextLargeElementWithExtraParam(root.children.get(i), n, res);
-        if(temp != null) {
-            if(temp.data > n) {
-                if(res != null) {
-                    if(temp.data < res.data) {
-                        res = temp;
-                    }
-                }
-                else {
-                    res = temp;
-                }
-            }
-        }
+    }
+    for(int i = 0; i < root.children.size(); i++) {
+      TreeNode<Integer> temp = findNextLargeElementWithExtraParam(root.children.get(i), n, res);
+      if(temp != null) {
+          if(temp.data > n) {
+              if(res != null) {
+                  if(temp.data < res.data) {
+                      res = temp;
+                  }
+              }
+              else {
+                  res = temp;
+              }
+          }
       }
     }
     return res;
