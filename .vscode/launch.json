@@ -2,6 +2,23 @@
   "configurations": [
     {
       "type": "java",
+<<<<<<< HEAD
+=======
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
+      "mainClass": "trees.Main",
+      "projectName": "coding_dfe74aa"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - PrintLevelWise",
+      "request": "launch",
+      "mainClass": "trees.PrintLevelWise",
+      "projectName": "coding_dfe74aa"
+    },
+    {
+      "type": "java",
+>>>>>>> 5ddd62b... File Splitting
       "name": "CodeLens (Launch) - SubSetSum",
       "request": "launch",
       "mainClass": "SubSetSum",
