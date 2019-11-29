@@ -35,7 +35,9 @@ public class SecondLargestValue {
         }
         else {
           if(result.secondLargest == null) {
-            result.secondLargest = tNode.largest;
+            if(tNode.largest.data != result.largest.data) { 
+              result.secondLargest = tNode.largest;
+            }
           }
           else if(result.secondLargest.data < tNode.largest.data) {
             result.secondLargest = tNode.largest;
