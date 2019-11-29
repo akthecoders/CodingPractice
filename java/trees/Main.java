@@ -39,12 +39,12 @@ public class Main {
     /**
      * Find LargestSecondLargestNode
      */
-    TreeNode<Integer> secondLargestNode = SecondLargestValue.getSecondLargestNode(root);
-    if(secondLargestNode == null) {
-      System.out.println("Null Node");
-    }
-    else {
-      System.out.println("Second Largest Node : " + secondLargestNode.data);
-    }
+    // TreeNode<Integer> secondLargestNode = SecondLargestValue.getSecondLargestNode(root);
+    // if(secondLargestNode == null) {
+    //   System.out.println("Null Node");
+    // }
+    // else {
+    //   System.out.println("Second Largest Node : " + secondLargestNode.data);
+    // }
   }  
 }
