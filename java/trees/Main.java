@@ -33,7 +33,18 @@ public class Main {
     /**
      * Find LargestSumNode
      */
-    TreeNode<Integer> largestSumNode = FindLargestSumNode.findLargestSumNode(root);
-    System.out.println("Largest Sum Node : " + largestSumNode.data);
+    // TreeNode<Integer> largestSumNode = FindLargestSumNode.findLargestSumNode(root);
+    // System.out.println("Largest Sum Node : " + largestSumNode.data);
+
+    /**
+     * Find LargestSecondLargestNode
+     */
+    TreeNode<Integer> secondLargestNode = SecondLargestValue.getSecondLargestNode(root);
+    if(secondLargestNode == null) {
+      System.out.println("Null Node");
+    }
+    else {
+      System.out.println("Second Largest Node : " + secondLargestNode.data);
+    }
   }  
 }
