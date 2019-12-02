@@ -6,8 +6,15 @@
 =======
       "name": "CodeLens (Launch) - Main",
       "request": "launch",
+      "mainClass": "trees.binarytree.Main",
+      "projectName": "programming_faa8c938"
+    },
+    {
+      "type": "java",
+      "name": "CodeLens (Launch) - Main",
+      "request": "launch",
       "mainClass": "trees.Main",
-      "projectName": "coding_dfe74aa"
+      "projectName": "programming_faa8c938"
     },
     {
       "type": "java",
