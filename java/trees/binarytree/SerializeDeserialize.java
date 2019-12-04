@@ -1,5 +1,6 @@
 package trees.binarytree;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -7,60 +8,76 @@ import java.util.Map;
  * SerializeDeserialize
  */
 public class SerializeDeserialize {
+  private static String inOrderString = "";
+  private static String preOrderString = "";
+  private static int preIndex = 0;
 
- public static String serialize(BinaryNode<Integer> root) {
-   if(root == null) {
-     return "";
-   }
-  String result = "";
-  result +=  root.data + ":";
-  if(root.left != null) {
-    result += root.left.data;
+  public static String serialize(BinaryNode<Integer> root) {
+    inOrderString = "";
+    preOrderString = "";
+    inOrder(root);
+    preOrder(root);
+    String serializedString = inOrderString + ":" + preOrderString;
+    return serializedString;
   }
-  else {
-    result += "0";
-  } 
-  result += "|";
-  if(root.right != null) {
-    result += root.right.data;
-  }
-  else {
-    result += "0";
-  } 
-  result += ",";
-  result += serialize(root.left);
-  result += serialize(root.right);
-  return result;
- } 
 
- public static BinaryNode<Integer> deserialize(String inputString) {
-  String[] arrOfString = inputString.split(",");
-  Map<Integer, BinaryNode<Integer>> map = new HashMap<Integer,BinaryNode<Integer>>();
-  BinaryNode<Integer> mNode = null;
-  for(String node : arrOfString) {
-    String[] arrNode = node.split(":");
-    Integer pNode = Integer.parseInt(arrNode[0]);
-    String childNodeArray[] = arrNode[1].split("|");
-    Integer leftChild = Integer.parseInt(childNodeArray[0]);
-    Integer rightChild = Integer.parseInt(childNodeArray[1]);
-   
-    if(map.containsKey(pNode)) {
-      mNode = map.get(pNode);
+  private static void inOrder(BinaryNode<Integer> root) {
+    if (root == null) {
+      return;
     }
-    else {
-      mNode = new BinaryNode<Integer>(pNode);
-    }
-    if(leftChild > 0) {
-      BinaryNode<Integer> leftChildNode = new BinaryNode<Integer>(leftChild);
-      map.put(leftChild, leftChildNode);
-      mNode.left = leftChildNode;
-    }
-    if(rightChild > 0) {
-      BinaryNode<Integer> rightChildNode = new BinaryNode<Integer>(rightChild);
-      map.put(rightChild, rightChildNode);
-      mNode.right = rightChildNode;
-    }
+    inOrder(root.left);
+    inOrderString += root.data + " ";
+    inOrder(root.right);
   }
-  return mNode;
- }
+
+  private static void preOrder(BinaryNode<Integer> root) {
+    if(root == null) {return;}
+    preOrderString += root.data + " ";
+    preOrder(root.left);
+    preOrder(root.right);
+}
+
+  public static BinaryNode<Integer> deserialize(String inputString) {
+    System.out.println(inputString);
+    String[] arrOfString = inputString.split(":");
+    String inOrderString = arrOfString[1];
+    String preOrderString = arrOfString[1];
+    int[] inOrder = convertStringToInt(inOrderString.split(" "));
+    int[] preOrder = convertStringToInt(preOrderString.split(" "));
+    preIndex = 0;
+    // return null;
+    return buildTree(inOrder, preOrder, 0, inOrder.length - 1);
+  }
+
+  private static int[] convertStringToInt(String[] input) {
+    int [] arr = new int [input.length];
+      for(int i=0; i < input.length; i++) {
+         arr[i] = Integer.parseInt(input[i]);
+      }
+    return arr;
+  }
+
+  private static BinaryNode<Integer> buildTree(int[] inOrder, int[] preOrder, int inStart, int inEnd) {
+    if(inStart > inEnd) {
+        return null;
+    }
+    BinaryNode<Integer> tNode = new BinaryNode<>(preOrder[preIndex++]);
+    if(inStart == inEnd) {
+        return tNode;
+    }
+    int rootIndex = searchIndex(inOrder, inStart, inEnd, tNode.data);
+    tNode.left = buildTree(inOrder, preOrder, inStart, rootIndex - 1);
+    tNode.right = buildTree(inOrder, preOrder, rootIndex + 1, inEnd);
+    return tNode;
+}
+
+private static int searchIndex(int arr[], int strt, int end, int value) {
+    int i;
+    for(i = strt; i <= end; i++) {
+        if(arr[i] == value) {
+            return i;
+        }
+    }
+    return i;
+}
 }
