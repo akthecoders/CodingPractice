@@ -36,7 +36,7 @@ public class LevelWiseLinkedList {
                 arrayList.add(head);
                 head = null;
                 tail = null;
-                queue.enqueue(null);
+                queue.add(null);
             } else if (currNode != null) {
                 Node<BinaryNode<Integer>> childNode = new Node<BinaryNode<Integer>>(currNode);
                 if (head == null) {
@@ -47,10 +47,10 @@ public class LevelWiseLinkedList {
                     tail = childNode;
                 }
                 if (currNode.left != null) {
-                    queue.enqueue(currNode.left);
+                    queue.add(currNode.left);
                 }
                 if (currNode.right != null) {
-                    queue.enqueue(currNode.right);
+                    queue.add(currNode.right);
                 }
             }
         }
