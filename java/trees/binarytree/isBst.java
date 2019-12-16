@@ -1,8 +1,5 @@
 package trees.binarytree;
 
-/**
- * isBst
- */
 public class isBst {
 
     public static boolean isBST(BinaryNode<Integer> root) {
