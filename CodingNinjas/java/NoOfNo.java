@@ -11,13 +11,7 @@ class NoOfNo {
     System.out.println("No of combination" + map.size());
   }
 
-  /**
-   * permutation function
-   * 
-   * @param str string to calculate permutation for
-   * @param l   starting index
-   * @param r   end index
-   */
+  
   private HashMap<String, Integer> permute(String str, int l, int r, String orig, HashMap<String, Integer> map) {
     if (l == r) {
       int orign = Integer.parseInt(orig);
