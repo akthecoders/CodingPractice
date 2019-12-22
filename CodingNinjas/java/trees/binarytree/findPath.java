@@ -1,21 +1,9 @@
+package trees.binarytree;
 import java.util.ArrayList;
 
-public class Solution {
+public class findPath {
 
-/*	Binary Tree Node class
- * 
- * class BinaryTreeNode<T> {
-		T data;
-		BinaryTreeNode<T> left;
-		BinaryTreeNode<T> right;
-		
-		public BinaryTreeNode(T data) {
-			this.data = data;
-		}
-	}
-	*/
-
-	public static ArrayList<Integer> findPath(BinaryTreeNode<Integer> root, int data){
+	public static ArrayList<Integer> findPathBTree(BinaryNode<Integer> root, int data){
 		if(root == null) {
             return null;
         }
@@ -27,7 +15,7 @@ public class Solution {
         }
         
         if(root.data > data) {
-            ArrayList<Integer> output = findPath(root.left, data);
+            ArrayList<Integer> output = findPathBTree(root.left, data);
             if(output != null) {
                 output.add(root.data);
             }
@@ -35,7 +23,7 @@ public class Solution {
         }
         
         if(root.data < data) {
-            ArrayList<Integer> output = findPath(root.right, data);
+            ArrayList<Integer> output = findPathBTree(root.right, data);
             if(output != null) {
                 output.add(root.data);
             }

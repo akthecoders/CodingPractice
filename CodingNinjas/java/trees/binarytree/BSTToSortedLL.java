@@ -1,7 +1,7 @@
-    class HTNode {
-        LinkedListNode<Integer> head = null;
-        LinkedListNode<Integer> tail = null;
-    }
+class HTNode {
+    LinkedListNode<Integer> head = null;
+    LinkedListNode<Integer> tail = null;
+}
 
 public class Solution {
 
