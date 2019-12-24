@@ -11,9 +11,6 @@ public class Main {
         Scanner scan = new Scanner(System.in);
         BinaryNode<Integer> root = InputLevelWise.inputLevelWise(scan);
         PrintLevelWise.printLevelWise(root);
-        // PrintLevelWise.printLevelWise(root);
-        // System.out.println("No of nodes : " + CountNoOfNodes.countNoOfNodes(root));
-        System.out.println("No of nodes : " + CountNoOfNodes.countNoOfNodes(root));
         // System.out.println("No of nodes : " + CountNoOfNodes.countNoOfNodes(root));
         // System.out.println("Diameter of tree : " + DiameterBTree.getDiameter(root));
         // PrintLevelWise.printLevelWise(root);
