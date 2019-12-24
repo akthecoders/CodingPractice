@@ -34,7 +34,7 @@ class LinkedListNode<T> {
 	}
 }
 */
-	public static LinkedList<Integer> BSTToSortedLL(BinaryNode<Integer> root){
+	public static LinkedList<Integer> getBSTToSortedLL(BinaryNode<Integer> root){
 		HTNode result = helper(root);
         return result.head;
 	}
