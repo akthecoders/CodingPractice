@@ -1,9 +1,13 @@
+package trees.binarytree;
+
+import java.util.LinkedList;
+
 class HTNode {
-    LinkedListNode<Integer> head = null;
-    LinkedListNode<Integer> tail = null;
+    LinkedList<Integer> head = null;
+    LinkedList<Integer> tail = null;
 }
 
-public class Solution {
+public class BSTToSortedLL {
 
 /*	Binary Tree Node class 
  * 
@@ -30,39 +34,39 @@ class LinkedListNode<T> {
 	}
 }
 */
-	public static LinkedListNode<Integer> BSTToSortedLL(BinaryTreeNode<Integer> root){
+	public static LinkedList<Integer> BSTToSortedLL(BinaryNode<Integer> root){
 		HTNode result = helper(root);
         return result.head;
 	}
     
-    public static HTNode helper(BinaryTreeNode<Integer> root) {
+    public static HTNode helper(BinaryNode<Integer> root) {
         if(root == null) {
             HTNode result = new HTNode();
             result.head = null;
             result.tail = null;
             return result;
         }
-        LinkedListNode<Integer> nn = new LinkedListNode<Integer>(root.data);
+        LinkedList<Integer> nn = new LinkedList<Integer>();
         HTNode left = helper(root.left);
         HTNode right = helper(root.right);
         HTNode pair = new HTNode();
         if(left.head != null) {
             pair.head = left.head;
             pair.tail = left.tail;
-            pair.tail.next = nn;
+            pair.tail = nn;
             pair.tail = nn;
             if(right.head == null) {
                 return pair;
             }
         }
         if(left.head != null && right.head != null){
-            pair.tail.next = right.head;
+            pair.tail = right.head;
             pair.tail = right.tail;
             return pair;
         }
         if(left.head == null && right.head != null ) {
             pair.head = nn;
-            pair.head.next = right.head;
+            pair.head = right.head;
             pair.tail = right.tail;
             return pair;
         }
