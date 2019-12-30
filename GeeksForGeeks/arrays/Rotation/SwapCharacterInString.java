@@ -2,7 +2,7 @@ package Rotation;
 
 import java.util.Scanner;
 
-public class QueriesForRotation {
+public class SwapCharacterInString {
 
     public static void main(String args[]) {
         Scanner scan = new Scanner(System.in);
@@ -10,7 +10,7 @@ public class QueriesForRotation {
         int noOfTimes = scan.nextInt();
         int chars = scan.nextInt();
 
-        String input = swap(input, noOfTimes, chars);
+        input = swap(input, noOfTimes, chars);
         System.out.println(input);
     }
 
@@ -24,8 +24,8 @@ public class QueriesForRotation {
         int f = noOfTimes / n;
         int r = noOfTimes % n;
 
-        String p1 = rotate(input.substring(0, c), ((n % chars) * f) % chars );
-        String p2 = rotate(input.substring(c), (chars * f) % (n - chars));
+        String p1 = rotate(input.substring(0, chars), ((n % chars) * f) % chars );
+        String p2 = rotate(input.substring(chars), (chars * f) % (n - chars));
 
         char a[] = (p1 + p2).toCharArray();
         for(int i = 0; i < r; i++) {
@@ -34,10 +34,10 @@ public class QueriesForRotation {
             a[(i + chars) % n] = temp;
         }
 
-        return String(a);
+        return new String(a);
     }
 
     private static String rotate(String str, int p) {
-        return s.substring(p) + s.substring(0, p);
+        return str.substring(p) + str.substring(0, p);
     }
 }
