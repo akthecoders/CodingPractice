@@ -12,6 +12,7 @@ public class SwapCharacterInString {
 
         input = swap(input, noOfTimes, chars);
         System.out.println(input);
+        scan.close();
     }
 
     private static String swap(String input, int noOfTimes, int chars) {
