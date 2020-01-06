@@ -21,7 +21,7 @@ public class PosNeg {
     }
 
     public static void rearrange(int[] arr, int n) {
-        int i  = -1, j = 0, k = 0, temp = 0;
+        int i  = -1, j = 0, temp = 0;
         for(j = 0; j < n; j++) {
             if(arr[j] < 0) {
                 i++;
