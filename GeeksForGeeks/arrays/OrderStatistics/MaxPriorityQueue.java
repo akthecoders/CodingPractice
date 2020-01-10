@@ -23,53 +23,64 @@ public class MaxPriorityQueue {
     }
 
     public void insertElement(Integer element) {
-        int parentIndex = 0;
-        int childIndex = 0;
-        if(size > 0) {
-            childIndex = size;
-            parentIndex = (size - 1)/2;
+      int childIndex = 0;
+      int parentIndex = 0;
+      if(size > 0) {
+        childIndex = size ;
+        parentIndex = (size - 1)/2;
+      }
+      queue.add(element);
+      size++;
+      printQueue();
+      while(childIndex > 0) {
+        Integer childData = queue.get(childIndex);
+        Integer parentData = queue.get(parentIndex);
+        if(parentData < childData) {
+          Integer temp = queue.get(childIndex);
+          queue.set(childIndex, parentData);
+          queue.set(parentIndex, temp);
+          childIndex = parentIndex;
+          parentIndex = ((parentIndex - 1) / 2);
         }
-        this.queue.add(element);
-        size++;
-        while(childIndex > 0) {
-            Integer parentData = this.queue.get(parentIndex);
-            Integer childData = this.queue.get(childIndex);
-            if(parentData < childData) {
-                this.queue.set(childIndex, parentData);
-                this.queue.set(parentIndex, childData);
-                childIndex = parentIndex;
-                parentIndex = (childIndex - 1)/2;
-            }
-            else {
-                break;
-            }
+        else {
+          break;
         }
+      }
     }
 
     public void removeElement() {
-        if(size <= 0) {
-            return;
+      if(size <= 0) {
+        return;
+      }
+  
+      queue.set(0, queue.get(queue.size() - 1));
+      queue.remove(queue.size() - 1);
+      size--;
+  
+      int parentIndex = 0;
+      int maxIndex = 0;
+      int leftChild = (parentIndex * 2) + 1;
+      int rightChild = (parentIndex * 2) + 2;
+      
+      while(maxIndex < size) {
+        leftChild = (parentIndex * 2) + 1;
+        rightChild = (parentIndex * 2) + 2;
+        if(leftChild < size && queue.get(leftChild) > queue.get(parentIndex)) {
+          maxIndex = leftChild;
         }
-        this.queue.set(0, this.queue.get(this.queue.size() - 1));
-        queue.remove(this.queue.size() - 1);
-        size--;
-        int parentIndex = 0;
-        int maxIndex = 0;
-        int leftChild = (parentIndex * 2 + 1);
-        int rightChild = (parentIndex * 2) + 2;
-
-        if(leftChild < size && this.queue.get(leftChild) > this.queue.get(parentIndex)) {
-            maxIndex = leftChild;
+        if(rightChild < size && queue.get(rightChild) > queue.get(maxIndex)) {
+          maxIndex = rightChild;
         }
-        if(rightChild < size && this.queue.get(rightChild) > this.queue.get(maxIndex)) {
-            maxIndex = rightChild;
+        
+        if(maxIndex == parentIndex) {
+          break;
         }
-
         Integer temp = queue.get(parentIndex);
         queue.set(parentIndex, queue.get(maxIndex));
         queue.set(maxIndex, temp);
         parentIndex = maxIndex;
         maxIndex = parentIndex;
+      }
     }
 
     public void printQueue() {
