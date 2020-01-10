@@ -31,7 +31,6 @@ public class MaxPriorityQueue {
       }
       queue.add(element);
       size++;
-      printQueue();
       while(childIndex > 0) {
         Integer childData = queue.get(childIndex);
         Integer parentData = queue.get(parentIndex);
