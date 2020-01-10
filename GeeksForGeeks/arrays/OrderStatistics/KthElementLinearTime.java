@@ -38,7 +38,6 @@ public class KthElementLinearTime {
     } 
 
     static int randomPartition(int arr[], int l, int r) {
-        int n = r - l + 1;
         int pivot = new Random().nextInt(1);
         swap(arr, l + pivot, r);
         return partition(arr, l, r);

@@ -12,7 +12,6 @@ public class KthElementMinHeap {
     }
 
     public static Integer getKthSmallestElement(int[] arr, int k) {
-        Integer result = 0;
         MinPriorityQueue minQueue = new MinPriorityQueue();
         for (int i : arr) {
             minQueue.insertData(Integer.valueOf(i));   
