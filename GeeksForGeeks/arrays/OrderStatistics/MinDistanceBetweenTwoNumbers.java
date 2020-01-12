@@ -6,7 +6,7 @@ package OrderStatistics;
 public class MinDistanceBetweenTwoNumbers {
 
     public static void main(String[] args) {
-        int arr[] = { 3, 5, 4, 2, 6, 5, 6, 6, 5, 4, 8, 3 };
+        int arr[] = {3, 5, 4, 2, 6, 3, 0, 0, 5, 4, 8, 3}; 
         int n = arr.length;
         int x = 3;
         int y = 6;
@@ -21,19 +21,19 @@ public class MinDistanceBetweenTwoNumbers {
         { 
             if (arr[i] == x || arr[i] == y)  
             { 
-                prev = i; 
+                prev = i;
                 break; 
             } 
         }
 
-        for ( i = i + 1; i < n; i++) {
+        for (; i < n; i++) {
             if (arr[i] == x || arr[i] == y) {
-                System.out.println(arr[prev] + " - " + arr[i]);
                 if (arr[prev] != arr[i] && (i - prev) < min_dist) {
                     min_dist = i - prev;
                     prev = i;
-                } else
+                } else if(arr[prev] == arr[i]) {
                     prev = i;
+                }
             }
         }
 
