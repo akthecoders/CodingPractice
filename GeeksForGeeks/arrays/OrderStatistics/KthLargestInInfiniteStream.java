@@ -27,5 +27,6 @@ public class KthLargestInInfiniteStream {
             queue.removeElement();
         }
         System.out.println("Kth largest element is : " + queue.getMax());
+        s.close();
     }
 }
