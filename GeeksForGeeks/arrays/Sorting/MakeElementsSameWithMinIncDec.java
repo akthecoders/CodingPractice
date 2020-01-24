@@ -11,7 +11,7 @@ public class MakeElementsSameWithMinIncDec {
         int a[] = {3, 1, 1}; 
         int b[] = {1, 2, 2}; 
         int n = a.length; 
-        System.out.println(MinOperation(a, b, n)); 
+        System.out.println(MinOperation(a, b, n));
     }
 
     public static int MinOperation(int[] arr, int[] arr2, int n) {
