@@ -3,7 +3,7 @@ package Searching;
 /**
  * SearchingInAdjacentArray
  */
-public class SearchingInAdjacentArray {
+public class SearchingInAdjacentArray { 
 
     public static void main(String[] args) {
         int arr[] = { 2, 4, 5, 7, 7, 6 };
