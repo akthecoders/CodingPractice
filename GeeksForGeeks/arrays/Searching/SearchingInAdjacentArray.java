@@ -1,7 +1,7 @@
 package Searching;
 
 /**
- * SearchingInAdjacentArray
+ * SearchingInAdjacentArray 
  */
 public class SearchingInAdjacentArray { 
 
