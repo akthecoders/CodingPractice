@@ -1,7 +1,7 @@
 package Rotation;
 
 /**
- * AllRowOfMatrixEachOtherRotation
+ * AllRowOfMatrixEachOtherRotation 
  */
 public class AllRowOfMatrixEachOtherRotation {
 
