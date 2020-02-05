@@ -5,7 +5,7 @@ package Searching;
  */
 public class ArrayEquilibrium {
 
-  public static void main(String[] args) {
+  public static void main(String[] args) { 
     int arr[] = { -7, 1, 5, 2, -4, 3, 0 };
     int arr_size = arr.length;
     System.out.println("First equilibrium index is " + equilibrium(arr, arr_size));
