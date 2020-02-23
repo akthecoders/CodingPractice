@@ -7,4 +7,3 @@ I have planned to commit question from:
 
 Their will be a new folder for every Category of question or Source.
 I have coded in various langauges including 'PHP', 'Core Java', 'JS'.
-
