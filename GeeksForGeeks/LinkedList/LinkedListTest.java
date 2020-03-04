@@ -5,11 +5,9 @@ public class LinkedListTest {
 
   public static void main(String[] args) {
     LinkedList<Integer> ll = new LinkedList<>();
-    ll.head = new Node<Integer>(1);
-    Node<Integer> first = new Node<>(2);
-    Node<Integer> second = new Node<>(3);
-    ll.head.next = first;
-    first.next = second;
+    ll.push(0);
+    ll.append(3);
+    ll.insertBefore(2, 3);
     ll.printList();
   }
 }
