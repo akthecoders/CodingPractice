@@ -9,5 +9,9 @@ public class LinkedListTest {
     ll.append(3);
     ll.insertBefore(2, 3);
     ll.printList();
+
+    ll.deleteGivenKey(2);
+    ll.printList();
+    
   }
 }

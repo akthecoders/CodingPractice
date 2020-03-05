@@ -89,4 +89,27 @@ public class LinkedList<T> {
       return;
     }
   }
+
+  public void deleteGivenKey(T data) {
+    Node<T> temp = head;
+    Node<T> prevNode = head;
+    if(temp.data == data) {
+      head = head.next;
+      return;
+    }
+    temp = temp.next;
+    while(temp != null) {
+        if(temp.data == data) {
+            break;
+        }
+        prevNode = temp;
+        temp = temp.next;
+    }
+
+    if(temp == null) {
+      System.out.println("No such node to delete");
+      return;
+    }
+    prevNode.next = temp.next;
+  }
 }
