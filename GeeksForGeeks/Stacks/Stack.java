@@ -21,7 +21,6 @@ public class Stack {
         }
         
         sa[++top] = data;
-        System.out.println(data + " pushed to stack");
         return true;
     }
 
