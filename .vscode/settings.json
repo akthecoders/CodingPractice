@@ -1,12 +1,15 @@
 {
   "files.exclude": {
-    "": true,
     "java/**/*.class": true,
     "php": true,
     "LICENSE": true,
     "README.md": true,
     ".vscode": true,
     "java/.gitignore": true,
-    "java/NoOfNo.java": true
+    "java/NoOfNo.java": true,
+    "**/.classpath": true,
+    "**/.project": true,
+    "**/.settings": true,
+    "**/.factorypath": true
   }
 }
