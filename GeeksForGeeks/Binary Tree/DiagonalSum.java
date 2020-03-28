@@ -26,7 +26,7 @@ public class DiagonalSum {
         }
 
         Queue<TreeNode> q = new LinkedList<>();
-        Map<Integer, Integer> map = new TreeMap();
+        Map<Integer, Integer> map = new TreeMap<>();
         root.vd  = 0;
         q.add(root);
 
