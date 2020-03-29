@@ -28,6 +28,44 @@ public class BinaryTree {
         return root;
     }
 
+    public static Node delete(Node root, int key) {
+        if(root == null) {
+            return root;
+        }
+
+        if(key < root.data) {
+            root.left = delete(root.left, key);
+        }
+        else if(key > root.data) {
+            root.right = delete(root.right, key);
+        }
+        else {
+            if(root.left == null && root.right == null) {
+                return null;
+            }
+            if(root.left == null) {
+                return root.right;
+            }
+            else if(root.right == null) {
+                return root.left;
+            }
+
+            root.data = minValue(root.right);
+            root.right = delete(root.right, root.data);
+
+        }
+        return root;
+    }
+
+    public static int minValue(Node root) {
+        int minV = root.data;
+        while(root.left != null) {
+            minV = root.left.data;
+            root = root.left;
+        }
+        return minV;
+    }
+
     public static void traverse(Node root) {
         if(root == null) {
             return;
@@ -54,6 +92,15 @@ public class BinaryTree {
         traverse(root);
         System.out.println();
         root = insert(root, 7);
+        traverse(root);
+        System.out.println();
+        root = insert(root, 8);
+        traverse(root);
+        System.out.println();
+        root = insert(root, 9);
+        traverse(root);
+        System.out.println();
+        root = delete(root, 6);
         traverse(root);
         System.out.println();
     }
