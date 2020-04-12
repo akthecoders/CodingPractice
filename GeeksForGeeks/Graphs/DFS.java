@@ -3,6 +3,7 @@ import java.util.*;
 public class DFS {
     private int V;
     private LinkedList<Integer> adj[];
+    @SuppressWarnings("unchecked") 
     public DFS(int v) {
         V = v;
         adj = new LinkedList[v];

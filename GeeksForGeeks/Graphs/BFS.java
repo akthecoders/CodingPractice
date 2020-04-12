@@ -6,6 +6,7 @@ public class BFS {
     private int V;
     private LinkedList<Integer> adj[];
 
+    @SuppressWarnings("unchecked") 
     public BFS(int v) {
         V = v;
         adj = new LinkedList[V];

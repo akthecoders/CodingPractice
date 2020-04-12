@@ -3,7 +3,8 @@ import java.util.*;
 public class StronglyConnectedComponents {
     private int V;
     private LinkedList<Integer> adj[];
-  
+    
+    @SuppressWarnings("unchecked") 
     StronglyConnectedComponents(int v) { 
         V = v; 
         adj = new LinkedList[v]; 
@@ -26,6 +27,7 @@ public class StronglyConnectedComponents {
         }
     }
 
+    @SuppressWarnings("unchecked") 
     void fillOrder(int v, boolean[] visited, Stack stack) {
         visited[v] = true;
         Iterator<Integer> i = adj[v].iterator();
