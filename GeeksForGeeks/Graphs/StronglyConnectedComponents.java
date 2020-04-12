@@ -27,8 +27,7 @@ public class StronglyConnectedComponents {
         }
     }
 
-    @SuppressWarnings("unchecked") 
-    void fillOrder(int v, boolean[] visited, Stack stack) {
+    void fillOrder(int v, boolean[] visited, Stack<Integer> stack) {
         visited[v] = true;
         Iterator<Integer> i = adj[v].iterator();
         while (i.hasNext()) {
@@ -52,7 +51,7 @@ public class StronglyConnectedComponents {
     } 
 
     void printSCCs() {
-        Stack stack = new Stack<>();
+        Stack<Integer> stack = new Stack<>();
         boolean visited[] = new boolean[V];
         for(int i = 0; i < V; i++) 
             visited[i] = false; 
