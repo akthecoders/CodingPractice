@@ -5,7 +5,6 @@ public class DFSAdjMatrix {
     public static void main(String[] args) {
         int v;
         int e;
-
         Scanner scan = new Scanner(System.in);
         v = scan.nextInt();
         e = scan.nextInt();
