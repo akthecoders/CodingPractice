@@ -1,3 +1,6 @@
+import java.util.ArrayList;
+import java.util.List;
+
 // Minimum Distance Between BST Nodes
 public class P783 {
     public class TreeNode {
@@ -6,7 +9,7 @@ public class P783 {
         TreeNode right;
         TreeNode(int x) { val = x; }
     }
-    private void inorder(TreeNode root, List list) {
+    private void inorder(TreeNode root, List<Integer> list) {
         if (root != null) {
             inorder(root.left, list);
             list.add(root.val);
