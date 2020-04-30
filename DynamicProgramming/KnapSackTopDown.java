@@ -1,4 +1,4 @@
-// KnapSack Top Down
+// KnapSack Bottom Down
 public class KnapSackTopDown {
     public static void main(String[] args) {
         int value[] = {1, 4, 6, 3};
