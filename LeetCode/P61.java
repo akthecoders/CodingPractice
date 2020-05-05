@@ -10,14 +10,11 @@ public class P61 {
     public ListNode rotateRight(ListNode head, int k) {
         int length = 0;
         ListNode current = head;
-        ListNode tail = null;
-
         // Get LinkedList length
         while (current != null) {
             ++length;
 
             if (current.next == null) {
-                tail = current;
             }
 
             current = current.next;
