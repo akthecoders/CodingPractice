@@ -32,9 +32,10 @@ public class P1338 {
         private final int value;
         private final int frequency;
 
-        public Candidate(int value, int frequency) {
-            this.value = value;
-            this.frequency = frequency;
+        public Candidate(int v, int f) {
+            this.value = v;
+            this.frequency = f;
+            System.out.println("value" + this.value);
         }
     }
 }
