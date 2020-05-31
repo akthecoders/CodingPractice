@@ -30,6 +30,6 @@ public class P873 {
                 res = Math.max(res, dp[i][j]);
             }
         }
-        return res;
+        return res == 2 ? 0 : res;
     }
 }
