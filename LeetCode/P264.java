@@ -1,49 +1,31 @@
 //Ugly Number II
 public class P264 {
     public int nthUglyNumber(int n) {
-        if (n == 0)
-            return 0;
-        if (n == 1)
-            return 1;
+        int[] result = new int[n + 1];
+        result[0] = 1;
 
-        int p1 = 2;
-        int i1 = 0;
+        int i = 0, j = 0, k = 0, h = 1;
+        while (h <= n) {
+            int multiplyTwo = result[i] * 2;
+            int multiplyThree = result[j] * 3;
+            int multiplyFive = result[k] * 5;
 
-        int p3 = 3;
-        int i3 = 0;
+            int min = Math.min(multiplyTwo, Math.min(multiplyThree, multiplyFive));
+            result[h++] = min;
 
-        int p5 = 5;
-        int i5 = 0;
+            if (Integer.compare(min, multiplyTwo) == 0) {
+                i++;
+            }
 
-        int dp[] = new int[n + 1];
-        dp[0] = 1;
-        int curr = 1;
+            if (Integer.compare(min, multiplyThree) == 0) {
+                j++;
+            }
 
-        while (curr <= n) {
-            if (p1 < p3) {
-                if (p1 < p5) {
-                    dp[curr++] = p1;
-                    i1++;
-                    p1 = 2 * dp[i1];
-                } else {
-                    dp[curr++] = p5;
-                    i5++;
-                    p1 = 5 * dp[i5];
-                }
-            } else if (p1 < p5) {
-                dp[curr++] = p1;
-                i1++;
-                p1 = 2 * dp[i1];
-            } else if (p3 < p5) {
-                dp[curr++] = p3;
-                i3++;
-                p3 = 3 * dp[i3];
-            } else {
-                dp[curr++] = p5;
-                i5++;
-                p5 = 5 * dp[i5];
+            if (Integer.compare(min, multiplyFive) == 0) {
+                k++;
             }
         }
-        return dp[n];
+
+        return result[n - 1];
     }
 }
