@@ -15,7 +15,7 @@ public class P2015 {
                 if (map.get(ch) != ch2)
                     return false;
             } else {
-                if (map.containsKey(ch2))
+                if (map.containsValue(ch2))
                     return false;
                 map.put(ch, ch2);
             }
