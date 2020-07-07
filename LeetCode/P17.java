@@ -1,5 +1,4 @@
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -12,23 +11,24 @@ public class P17 {
     Map<String, String> phone;
     List<String> output = new ArrayList<String>();
     public List<String> letterCombinations(String digits) {
-        phone = new HashMap<>() {
-            /**
-             *
-             */
-            private static final long serialVersionUID = -2723277185625607161L;
+        phone = null;
+        // new HashMap<>() {
+        //     /**
+        //      *
+        //      */
+        //     private static final long serialVersionUID = -2723277185625607161L;
 
-            {
-                put("2", "abc");
-                put("3", "def");
-                put("4", "ghi");
-                put("5", "jkl");
-                put("6", "mno");
-                put("7", "pqrs");
-                put("8", "tuv");
-                put("9", "wxyz");
-            }
-        };
+        //     {
+        //         put("2", "abc");
+        //         put("3", "def");
+        //         put("4", "ghi");
+        //         put("5", "jkl");
+        //         put("6", "mno");
+        //         put("7", "pqrs");
+        //         put("8", "tuv");
+        //         put("9", "wxyz");
+        //     }
+        // };
         if (digits.length() != 0)
             backtrack("", digits);
         return output;
