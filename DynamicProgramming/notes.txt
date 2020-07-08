@@ -1,0 +1,51 @@
+Dynamic Programming
+
+
+                Recursion
+             ______|______
+            |             |
+       TopDown          Bottom Up
+         +
+       Memoize     
+
+Identify 
+1) Choices will be there
+2) Optimal something will be asked.
+
+DP : 
+Recursion -> Memoization -> Bottom Up
+
+
+
+Parent Questions - Variations
+
+1) 0 - 1 Knapsack (6)
+2) Unbounded Knapsack (5)
+3) Fibonacci (7)
+4) LCS (15) Longes Common Subsequence
+5) LIS (10) Longest Increasing Subsequence
+6) Kadane's Algorithm (6)
+7) Matrix chain multiplication (7)
+8) DP on Trees (4)
+9) DP on Grid (14)
+10) Others (5)
+
+
+***** 0 - 1 Knapsack Question ************
+1) Subset Sum
+2) Equal Sum Partition
+3) Count of Subset Sum
+4) Minimum Subset sum Diff
+5) Target Sum
+6) No of subset given diff
+
+Knapsack - Bag which we need to fill with our choices.
+
+Types of Knapack
+1) fractional - We can fill the bag after breaking the item also.
+2) Unbounded - Multiple occurences of item is allowed
+3) 0 - 1 = Both above conditions not allowed.
+
+
+
+ 
