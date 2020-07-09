@@ -31,7 +31,7 @@ Parent Questions - Variations
 10) Others (5)
 
 
-***** 0 - 1 Knapsack Question ************
+***** 0 - 1 Knapsack *************************
 1) Subset Sum
 2) Equal Sum Partition
 3) Count of Subset Sum
@@ -47,5 +47,10 @@ Types of Knapack
 3) 0 - 1 = Both above conditions not allowed.
 
 
+**** Unbounded Knapsack ************************
+ 1) Road Cutting
+ 2) Coin change I
+ 3) Coin change II
+ 4) Max Ribbon Cut
 
  
