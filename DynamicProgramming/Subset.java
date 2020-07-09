@@ -1,6 +1,6 @@
 public class Subset {
     public static void main(String[] args) {
-        int target = 8;
+        int target = 100;
         int[] subset = {1, 2, 8, 5, 3};
 
         boolean memory[][] = new boolean[subset.length + 1][target + 1];
@@ -11,7 +11,7 @@ public class Subset {
             }
         }
 
-        // System.out.println(recursive(subset, 0, subset.length - 1, target));
+        System.out.println(recursive(subset, 0, subset.length - 1, target));
         bottomup(subset, target, memory);
         System.out.println(memory[subset.length][target]);
     }
@@ -19,8 +19,8 @@ public class Subset {
     public static void bottomup(int[] subset, int target, boolean memory[][]) {
         for(int i = 1; i <= subset.length; i++) {
             for(int j = 1; j <= target; j++) {
-                if(subset[i - 1] < j) {
-                    memory[i][j] = memory[i][j - subset[i-1]] || memory[i-1][j];
+                if(subset[i - 1] <= j) {
+                    memory[i][j] = memory[i-1][j] || memory[i-1][j - subset[i-1]];
                 }
                 else {
                     memory[i][j] = memory[i-1][j];
