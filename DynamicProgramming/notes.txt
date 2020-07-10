@@ -53,4 +53,19 @@ Types of Knapack
  3) Coin change II
  4) Max Ribbon Cut
 
- 
+ **** LCS **************************************
+Longest Common Subsequence (Parent Problem)
+1) Longest Common Subsequence
+2) Print LCS
+3) Shortest Common supersequcne
+4) Print SCS
+5) Min # of insertion and deletion a -> b
+6) Largest Repeating Subsequence
+7) Length of longest Subsequence of a which is substring in b.
+8) Subsequence pattern matching
+9) Count how many time a appear as subsequence in b.
+10) Longest palendromic subsequence
+11) Longest palendromic substring
+12) Count of palindromic subsequence
+13) Min # of deletions to make a string palindrome.
+14) Min # of insertions to make a string palindrome.
