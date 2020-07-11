@@ -69,3 +69,13 @@ Longest Common Subsequence (Parent Problem)
 12) Count of palindromic subsequence
 13) Min # of deletions to make a string palindrome.
 14) Min # of insertions to make a string palindrome.
+
+
+**** Matrix Chain Mutiplication ************
+1) Matrix Chain multiplication
+2) Printing MCM.
+3) Evaluate Expression to True/Boolean Parenthesization
+4) Min/Max value of an Expression
+5) Palindromic Partition
+6) Scramble string
+7) Egg Dropping
