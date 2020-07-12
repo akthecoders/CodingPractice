@@ -79,3 +79,12 @@ Longest Common Subsequence (Parent Problem)
 5) Palindromic Partition
 6) Scramble string
 7) Egg Dropping
+
+
+***** DP on Trees *************************
+1) General Syntax
+2) How DP can be applied to trees.
+3) Diameter of Binary Tree.
+4) Max path sum from any node to any node.
+5) Max path sum from leaf to leaf.
+6) Diameter of n-ary tree.
