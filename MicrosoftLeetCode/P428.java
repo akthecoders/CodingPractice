@@ -39,7 +39,7 @@ public class P428 {
             sb.append(']');
         }
 
-        return sb.toString();
+        return sb.toString(); 
     }
 
     // Decodes your encoded data to tree.
