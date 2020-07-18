@@ -25,7 +25,7 @@ public class P273 {
         return output.trim().replaceAll("\\s\\s+", " ");
 
     }
-
+ 
     private String formatNumber(int num) {
         if (num < 10) {
             return ones[num];
