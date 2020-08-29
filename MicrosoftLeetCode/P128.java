@@ -2,6 +2,7 @@ import java.util.HashSet;
 import java.util.Set;
 
 //Longest Consecutive Sequence
+
 public class P128 {
     public int longestConsecutive(int[] nums) {
         Set<Integer> numSet = new HashSet<>();
