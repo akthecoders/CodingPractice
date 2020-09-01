@@ -5,6 +5,7 @@ import java.util.Map;
 import java.util.Random;
 
 //Insert Delete GetRandom O(1)
+
 public class P380 {
     Map<Integer, Integer> dict;
     List<Integer> list;
