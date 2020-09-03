@@ -1,4 +1,5 @@
 // Battleships in a Board
+
 public class P419 {
     public int countBattleships(char[][] board) {
         int m = board.length;
