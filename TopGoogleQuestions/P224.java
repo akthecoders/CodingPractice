@@ -19,18 +19,17 @@ public class P224 {
                 operand = 0;
             } else if (ch == '-') {
                 result += sign * operand;
-                sign = 0;
+                sign = -1;
                 operand = 0;
             } else if (ch == '(') {
-                result *= sign * operand;
                 stack.push(result);
                 stack.push(sign);
-                operand = 0;
                 sign = 1;
+                result = 0;
             } else if (ch == ')') {
-                result *= sign * operand;
+                result += sign * operand;
                 result *= stack.pop();
-                result *= stack.pop();
+                result += stack.pop();
                 operand = 0;
             }
         }
