@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.Map;
 
 //Group Anagrams
+// Revised
 public class P49 {
     public List<List<String>> groupAnagrams(String[] strs) {
         if (strs.length == 0)
