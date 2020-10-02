@@ -1,4 +1,5 @@
 //Jump Game II
+// Revised
 public class P45 {
     public int fpos(int a[], int p) {
         int pos = -1;
