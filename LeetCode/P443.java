@@ -1,4 +1,5 @@
 // String Compression
+// Revised
 public class P443 {
     public int compress(char[] chars) {
         int anchor = 0, write = 0;
