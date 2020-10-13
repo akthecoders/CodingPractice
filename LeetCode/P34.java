@@ -1,4 +1,5 @@
 //  Find First and Last Position of Element in Sorted Array
+// Revised
 public class P34 {
     public int[] searchRange(int[] nums, int target) {
         int start = 0, end = nums.length - 1, i = -1, j = -1;
