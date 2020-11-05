@@ -1,5 +1,5 @@
 //String to Integer (atoi)
-// Revised
+// Revision
 public class P8 {
     public int myAtoi(String str) {
         if (str.length() == 0)
