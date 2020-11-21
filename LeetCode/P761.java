@@ -21,3 +21,5 @@ public class P761 {
         return String.join("", lst);
     }
 }
+
+// Revision
