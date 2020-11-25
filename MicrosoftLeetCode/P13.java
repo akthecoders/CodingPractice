@@ -1,6 +1,3 @@
-import java.util.HashMap;
-import java.util.Map;
-
 //Roman to Integer
 public class P13 {
     static Map<String, Integer> values = new HashMap<>();
@@ -40,5 +37,3 @@ public class P13 {
         return sum;
     }
 }
-
-// Revision
