@@ -10,8 +10,6 @@ public class Turnstile {
         Queue<Integer> entry = new LinkedList<>();
         Queue<Integer> exit = new LinkedList<>();
 
-        int result[] = new int[times.length];
-
         for(int i = 0; i < directions.length; i++) {
             int dir = directions[i];
             if(dir == 0) entry.offer(i);
