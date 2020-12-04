@@ -39,8 +39,8 @@ public class Dijikstra {
 
     public static void exploreNeighbour(int u, Set<Integer> visited, PriorityQueue<Node> pQ, int[][] graph, int N, int[] dist) {
         for(int i = 0; i < graph[u].length; i++) {
-            if(!visited.contains(i)) {
-                int d = graph[u][i];
+            int d = graph[u][i];
+            if(!visited.contains(d)) {
                 int newDist = dist[u] + d;
                 if(newDist < d) {
                     dist[i] = newDist;
