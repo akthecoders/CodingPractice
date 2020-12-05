@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class Turnstile {
     public static void main(String[] args) {
-        
+
     }
 
     public static int[] getTimes(int[] times, int[] directions) {
