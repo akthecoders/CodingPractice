@@ -2,55 +2,23 @@
   "configurations": [
     {
       "type": "java",
-<<<<<<< HEAD
-=======
-      "name": "CodeLens (Launch) - Main",
+      "name": "Launch UnionFind",
       "request": "launch",
-      "mainClass": "trees.binarytree.Main",
-      "projectName": "coding_dfe74aa"
+      "mainClass": "UnionFind",
+      "projectName": "Programming_4cf245ff"
     },
     {
       "type": "java",
-      "name": "CodeLens (Launch) - Main",
+      "name": "Launch Main",
       "request": "launch",
-      "mainClass": "trees.binarytree.Main",
-      "projectName": "programming_faa8c938"
+      "mainClass": "Main",
+      "projectName": "Programming_4cf245ff"
     },
     {
       "type": "java",
-      "name": "CodeLens (Launch) - Main",
+      "name": "Launch Java Program",
       "request": "launch",
-      "mainClass": "trees.Main",
-      "projectName": "programming_faa8c938"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - PrintLevelWise",
-      "request": "launch",
-      "mainClass": "trees.PrintLevelWise",
-      "projectName": "coding_dfe74aa"
-    },
-    {
-      "type": "java",
->>>>>>> 5ddd62b... File Splitting
-      "name": "CodeLens (Launch) - SubSetSum",
-      "request": "launch",
-      "mainClass": "SubSetSum",
-      "projectName": "coding_dfe74aa"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - SubSetArray",
-      "request": "launch",
-      "mainClass": "SubSetArray",
-      "projectName": "coding_dfe74aa"
-    },
-    {
-      "type": "java",
-      "name": "CodeLens (Launch) - NoOfNo",
-      "request": "launch",
-      "mainClass": "NoOfNo",
-      "projectName": "coding_dfe74aa"
+      "mainClass": ""
     }
   ]
 }
