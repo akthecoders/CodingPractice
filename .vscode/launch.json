@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch LongestCommonPrefixArray",
+      "request": "launch",
+      "mainClass": "LongestCommonPrefixArray",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
       "name": "Launch BinarySearchTree",
       "request": "launch",
       "mainClass": "BinarySearchTree",
