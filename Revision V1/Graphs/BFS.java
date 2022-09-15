@@ -2,7 +2,7 @@ package Graphs;
 
 import java.util.*;
 
-public class DFS {
+public class BFS {
     static class Edge {
         int from, to, cost;
         public Edge(int from, int to, int cost) {
@@ -21,15 +21,27 @@ public class DFS {
         list.add(new Edge(from, to , cost));
     }
 
-    static int dfs(int at, boolean[] visited, Map<Integer, List<Edge>> graph) {
-        if(visited[at]) return 0;
-        visited[at] = true;
+    public static int bfs(int startNode, boolean visited[], Map<Integer, List<Edge>> graph) {
+
         int count = 1;
-        
-        List<Edge> edges = graph.get(at);
-        if(edges != null) {
-            for(Edge edge: edges)
-            count += dfs(edge.to, visited, graph);
+        Queue<Integer> q = new LinkedList<>();
+        q.offer(startNode);
+        visited[startNode] = true;
+        while(!q.isEmpty()) {
+            int nodes = q.size();
+            for(int i = 0; i < nodes; i++) {
+                int from = q.poll();
+                List<Edge> edges = graph.get(from);
+                 if(edges != null && !edges.isEmpty()) {
+                    for(Edge edge: edges) {
+                        if(!visited[edge.to]) {
+                            visited[edge.to] = true;
+                            count++;
+                            q.offer(edge.to);
+                        }
+                    }
+                }
+            }
         }
         return count;
     }
@@ -44,10 +56,8 @@ public class DFS {
         addDirectedGraph(graph, 2, 3, 1);
         addDirectedGraph(graph, 2, 2, 10);
 
-        int nodeCount = dfs(0, new boolean[numNodes], graph);
+        int nodeCount = bfs(0, new boolean[numNodes], graph);
         System.out.println("DFS count starting at node 0: " + nodeCount);
         if(nodeCount != 4) System.err.println("Error with DFS");
-
-
     }
 }
