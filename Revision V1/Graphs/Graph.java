@@ -11,6 +11,10 @@ public class Graph {
         this.numNodes = numNodes;
     }
 
+    public int numOfNodes() {
+        return this.numNodes;
+    }
+    
     public List<GraphEdge> getEdgesFrom(int from) {
         return graph.get(from);
     }
