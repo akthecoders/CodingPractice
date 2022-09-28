@@ -2,6 +2,41 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch ShortestPathDijikstra",
+      "request": "launch",
+      "mainClass": "Graphs.ShortestPathDijikstra",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
+      "name": "Launch TopologicalSort",
+      "request": "launch",
+      "mainClass": "Graphs.TopologicalSort",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
+      "name": "Launch TreeCenters",
+      "request": "launch",
+      "mainClass": "Graphs.TreeCenters",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
+      "name": "Launch BFS",
+      "request": "launch",
+      "mainClass": "Graphs.BFS",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
+      "name": "Launch DFS",
+      "request": "launch",
+      "mainClass": "Graphs.DFS",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
       "name": "Launch LongestCommonPrefixArray",
       "request": "launch",
       "mainClass": "LongestCommonPrefixArray",
