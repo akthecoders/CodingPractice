@@ -2,6 +2,13 @@
   "configurations": [
     {
       "type": "java",
+      "name": "Launch TravellingSalesMan",
+      "request": "launch",
+      "mainClass": "Graphs.TravellingSalesMan",
+      "projectName": "Programming_4cf245ff"
+    },
+    {
+      "type": "java",
       "name": "Launch TarjanSCC",
       "request": "launch",
       "mainClass": "Graphs.TarjanSCC",
